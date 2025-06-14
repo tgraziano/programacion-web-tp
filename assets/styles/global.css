@@ -2,6 +2,7 @@
 @import url("/assets/styles/design/colors.css");
 @import url("/assets/styles/design/fonts.css");
 @import url("/assets/styles/design/tooltip.css");
+@import url("/assets/styles/design/notifications.css");
 
 * {
   box-sizing: border-box;
