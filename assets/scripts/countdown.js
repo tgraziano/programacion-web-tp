@@ -17,10 +17,10 @@ function getTimes() {
       seconds: "00",
     };
 
-  const seconds = Math.floor((diff / 1000) % 60);
-  const minutes = Math.floor((diff / 1000 / 60) % 60);
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const seconds = Math.floor((diff / second) % 60);
+  const minutes = Math.floor((diff / second / 60) % 60);
+  const hours = Math.floor((diff / (second * 60 * 60)) % 24);
+  const days = Math.floor(diff / (second * 60 * 60 * 24));
 
   const format = (num) => String(num).padStart(2, "0");
 
@@ -46,7 +46,7 @@ const updateCountdown = () => {
 
 function initDateCountdown() {
   updateCountdown();
-  setInterval(updateCountdown, 1000);
+  setInterval(updateCountdown, second);
 }
 
 initDateCountdown();
