@@ -111,3 +111,11 @@
   --font-saatliches: "Saatliches", sans-serif;
   --font-poppins: "Poppins", sans-serif;
 }
+
+.font-saatliches {
+  font-family: var(--font-saatliches);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}

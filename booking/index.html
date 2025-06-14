@@ -3,118 +3,178 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linkin Park | Reserva</title>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="preload" href="/assets/styles/global.css" as="style" />
-    <link rel="preload" href="/assets/styles/navbar.css" as="style" />
+    <title>Linkin Park | From Zero</title>
     <link rel="stylesheet" href="/assets/styles/global.css" />
-    <link rel="stylesheet" href="/assets/styles/navbar.css" />
     <link rel="stylesheet" href="/styles/booking.css" />
-    <link rel="stylesheet" href="/assets/styles/header.css" />
-    <link rel="stylesheet" href="/assets/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/presentation.css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <header class="header-container">
+    <header class="header-container w-100">
+      <button type="button" class="btn btn-menu">
+        <img
+          alt="Botón de navegación"
+          src="/assets/svgs/menu.svg"
+          width="30"
+          height="24"
+        />
+      </button>
+      <nav class="nav-responsive">
+        <img
+          class="logo-item"
+          src="/assets/images/vinyl-preview.png"
+          alt="Vinilo vista previa"
+          width="60"
+          height="34"
+        />
+        <div class="nav-response-items-container h-100 w-100">
+          <a href="/" class="font-poppins text-white text-lg font-semibold">
+            Inicio
+          </a>
+          <span class="line-separator"></span>
+          <a
+            href="/#album"
+            class="font-poppins text-white text-lg font-semibold"
+          >
+            Álbum
+          </a>
+          <span class="line-separator"></span>
+          <a
+            href="/booking"
+            class="font-poppins text-white text-lg font-semibold active"
+          >
+            Reservar
+          </a>
+        </div>
+      </nav>
       <nav class="nav-container">
         <img
           src="/assets/images/vinyl-preview.png"
-          loading="eager"
+          alt="Vinilo vista previa"
           width="60"
           height="34"
-          alt="Vinillo vista previa"
         />
-        <span>•</span>
-        <a href="/">Inicio</a>
-        <span>•</span>
-        <a href="/booking/" class="selected">Reserva</a>
+        <span class="line-separator"></span>
+        <a href="/" class="font-poppins text-white text-base font-semibold">
+          Inicio
+        </a>
+        <span class="line-separator"></span>
+        <a
+          href="/#album"
+          class="font-poppins text-white text-base font-semibold"
+        >
+          Álbum
+        </a>
+        <span class="line-separator"></span>
+        <a
+          href="/booking"
+          class="font-poppins text-white text-base font-semibold active"
+        >
+          Reservar
+        </a>
       </nav>
     </header>
+    <div class="video-container w-100">
+      <video
+        class="h-100 w-100"
+        autoplay
+        muted
+        loop
+        preload="true"
+        alt="Video de presentación albúm"
+      >
+        <source src="/assets/videos/presentation.mp4" type="video/mp4" />
+        No compatible video player detected.
+      </video>
+      <div class="detail-presentation text-white text-xl">
+        <h1 class="font-saatliches font-black text-nowrap text-3xl">
+          LINKIN PARK
+        </h1>
+        <span>•</span>
+        <div class="date-container">
+          <div class="date-item">
+            <p id="date-days" class="font-poppins font-bold text-xl">00</p>
+            <p class="font-poppins text-sm font-semibold text-gray-light">
+              Días
+            </p>
+          </div>
+          <span class="line-separator"></span>
+          <div class="date-item">
+            <p id="date-hours" class="font-poppins font-bold text-xl">00</p>
+            <p class="font-poppins text-sm font-semibold text-gray-light">
+              Horas
+            </p>
+          </div>
+          <span class="line-separator"></span>
+          <div class="date-item">
+            <p id="date-minutes" class="font-poppins font-bold text-xl">00</p>
+            <p class="font-poppins text-sm font-semibold text-gray-light">
+              Minutos
+            </p>
+          </div>
+          <span class="line-separator"></span>
+          <div class="date-item">
+            <p id="date-seconds" class="font-poppins font-bold text-xl">00</p>
+            <p class="font-poppins text-sm font-semibold text-gray-light">
+              Segundos
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <main class="main-container">
-      <section class="section-presentation">
-        <video
-          autoplay
-          muted
-          loop
-          preload="true"
-          alt="Video de presentación albúm"
+      <h1 class="text-white text-3xl font-poppins font-black">
+        Formulario de reserva
+      </h1>
+      <p class="text-white font-poppins text-md font-regular">
+        Reserve su vinilo del álbum
+        <strong class="text-primary font-black"
+          >From Zero Deluxe Edition</strong
         >
-          <source src="/assets/videos/presentation.mp4" type="video/mp4" />
-          No compatible video player detected.
-        </video>
-
-        <article class="article-presentation">
-          <div class="article-presentation-info">
-            <h1>From Zero Deluxe edition</h1>
-
-            <p>
-              <strong>LINKIN PARK</strong> • Fecha de lanzamiento: 16 de mayo de
-              2025
-            </p>
-
-            <div class="article-presentation-date-container">
-              <div class="article-presentation-date-item">
-                <h2 id="date-days"></h2>
-                <span>días</span>
-              </div>
-              <span class="line-separator"></span>
-              <div class="article-presentation-date-item">
-                <h2 id="date-hours"></h2>
-                <span>horas</span>
-              </div>
-              <span class="line-separator"></span>
-              <div class="article-presentation-date-item">
-                <h2 id="date-minutes"></h2>
-                <span>minutos</span>
-              </div>
-              <span class="line-separator"></span>
-              <div class="article-presentation-date-item">
-                <h2 id="date-seconds"></h2>
-                <span>segundos</span>
-              </div>
-            </div>
-          </div>
-          <a href="/#album" class="btn-primary">Escuchar el álbum</a>
-        </article>
-      </section>
-      <section class="booking-form-container">
-        <h2>Reserve su vinilo firmado</h2>
-        <form class="form-container">
-          <input
-            type="email"
-            class="input-email"
-            name="email"
-            placeholder="Correo"
-            autocomplete="off"
-            required
-          />
-
-          <select class="select-sign" name="sign" required>
-            <option value="" selected disabled>Firmado por:</option>
-            <option value="brad-delson">Brad Delson</option>
-            <option value="colin-brittain">Colin Brittain</option>
-            <option value="dave-farrell">Dave Farrell</option>
-            <option value="emily-armstrong">Emily Armstrong</option>
-            <option value="joe-hahn">Joe Hahn</option>
-            <option value="mike-shinoda">Mike Shinoda</option>
-          </select>
-          <div class="price-detail-container">
-            <button type="submit" name="button-reserve" class="btn-primary">
-              Reservar
-            </button>
-            <p>$ 250.000</p>
-          </div>
-        </form>
-      </section>
+        con la firma de su miembro favorito.
+      </p>
+      <form class="form-booking">
+        <input
+          type="email"
+          class="input-outline"
+          name="email"
+          placeholder="Ingrese su correo"
+          required
+          autocomplete="off"
+        />
+        <select name="sign" class="input-outline" required>
+          <option selected value="" disabled>
+            Seleccione el miembro de la banda
+          </option>
+          <option value="1">Brad Delson</option>
+          <option value="2">Colin Brittain</option>
+          <option value="3">Dave Farrell</option>
+          <option value="4">Emily Armstrong</option>
+          <option value="5">Joe Hahn</option>
+          <option value="6">Mike Shinoda</option>
+        </select>
+        <button
+          type="submit"
+          class="btn btn-primary text-lg font-medium"
+          name="button-reserve"
+        >
+          Reservar
+        </button>
+      </form>
     </main>
 
     <footer class="footer-container">
-      <h4 class="footer-title">
+      <h4 class="footer-title font-saatliches text-3xl text-white font-black">
         <img src="/assets/images/logo.png" width="50" height="50" alt="" />
         LINKIN PARK
       </h4>
-      <p>Siguenos en nuestras redes</p>
-      <div class="social-networks-container">
+      <p class="text-white font-poppins text-sm font-semibold">
+        Siguenos en nuestras redes
+      </p>
+      <nav class="social-networks-container">
         <div class="tooltip">
           <a
             href="https://www.instagram.com/linkinpark"
@@ -128,7 +188,11 @@
               height="30"
             />
           </a>
-          <p class="tooltip-message">Instagram</p>
+          <p
+            class="tooltip-message text-white font-poppins text-xs font-medium"
+          >
+            Instagram
+          </p>
         </div>
 
         <div class="tooltip">
@@ -145,7 +209,11 @@
               height="30"
             />
           </a>
-          <p class="tooltip-message">Youtube</p>
+          <p
+            class="tooltip-message text-white font-poppins text-xs font-medium"
+          >
+            Youtube
+          </p>
         </div>
 
         <div class="tooltip">
@@ -162,16 +230,20 @@
               height="30"
             />
           </a>
-          <p class="tooltip-message">Spotify</p>
+          <p
+            class="tooltip-message text-white font-poppins text-xs font-medium"
+          >
+            Spotify
+          </p>
         </div>
-      </div>
+      </nav>
     </footer>
 
-    <script type="module" async src="/js/booking.js"></script>
     <script src="/assets/scripts/notifications-sdk.js"></script>
     <script>
       const notificationsSDK = window["notificationsSDK"];
       notificationsSDK.init();
     </script>
+    <script type="module" src="/js/booking.js" async></script>
   </body>
 </html>

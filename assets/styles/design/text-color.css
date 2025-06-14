@@ -1,0 +1,19 @@
+.text-primary {
+  color: var(--primary);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.text-black {
+  color: var(--black);
+}
+
+.text-gray-light {
+  color: var(--gray-light);
+}
+
+.text-gray {
+  color: var(--gray);
+}

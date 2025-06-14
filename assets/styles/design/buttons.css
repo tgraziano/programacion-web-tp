@@ -1,26 +1,27 @@
-button {
-  background: transparent;
+.btn {
+  background-color: transparent;
   border: none;
+  color: var(--white);
   cursor: pointer;
+  transition: scale 200ms ease-in-out;
+  will-change: transform;
+  width: fit-content;
   &:disabled {
     cursor: default;
     opacity: 0.5;
   }
+  &:not(:disabled):hover {
+    cursor: pointer;
+    scale: 1.05;
+  }
 }
 
 .btn-primary {
-  background-color: var(--primary);
-  border-radius: 25px;
-  color: var(--neutral-50);
-  font-family: var(--font-poppins);
-  font-weight: 600;
-  font-size: 18px;
+  align-items: center;
+  background-color: var(--primary-dark);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
   padding: 12px 24px;
-  height: fit-content;
-  width: fit-content;
-  transition: transform 300ms ease-in-out;
-  will-change: transform;
-  &:not(:disabled):hover {
-    transform: scale(1.1);
-  }
+  gap: 15px;
 }

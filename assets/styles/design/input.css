@@ -1,0 +1,21 @@
+.input-outline {
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  outline: 2px solid var(--gray-light);
+  font-family: var(--font-poppins);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.input-outline::placeholder {
+  color: var(--gray-light);
+  font-weight: 600;
+}
+
+.input-outline option {
+  background: var(--gray-dark);
+  color: var(--white);
+}

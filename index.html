@@ -3,185 +3,392 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linkin Park | Inicio</title>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="preload" href="/assets/styles/global.css" as="style" />
-    <link rel="preload" href="/assets/styles/navbar.css" as="style" />
+    <title>Linkin Park | From Zero</title>
     <link rel="stylesheet" href="/assets/styles/global.css" />
-    <link rel="stylesheet" href="/assets/styles/navbar.css" />
     <link rel="stylesheet" href="/styles/home.css" />
-    <link rel="stylesheet" href="/assets/styles/header.css" />
-    <link rel="stylesheet" href="/assets/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/presentation.css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <header class="header-container">
+    <header class="header-container w-100">
+      <button type="button" class="btn btn-menu">
+        <img
+          alt="Botón de navegación"
+          src="/assets/svgs/menu.svg"
+          width="30"
+          height="24"
+        />
+      </button>
+      <nav class="nav-responsive">
+        <img
+          class="logo-item"
+          src="/assets/images/vinyl-preview.png"
+          alt="Vinilo vista previa"
+          width="60"
+          height="34"
+        />
+        <div class="nav-response-items-container h-100 w-100">
+          <a
+            href="/"
+            class="font-poppins text-white text-lg font-semibold active"
+          >
+            Inicio
+          </a>
+          <span class="line-separator"></span>
+          <a
+            href="/#album"
+            class="font-poppins text-white text-lg font-semibold"
+          >
+            Álbum
+          </a>
+          <span class="line-separator"></span>
+          <a
+            href="/booking"
+            class="font-poppins text-white text-lg font-semibold"
+          >
+            Reservar
+          </a>
+        </div>
+      </nav>
       <nav class="nav-container">
         <img
           src="/assets/images/vinyl-preview.png"
-          loading="eager"
+          alt="Vinilo vista previa"
           width="60"
           height="34"
-          alt="Vinillo vista previa"
         />
-        <span>•</span>
-        <a href="/" class="selected">Inicio</a>
-        <span>•</span>
-        <a href="/booking/">Reserva</a>
+        <span class="line-separator"></span>
+        <a
+          href="/"
+          class="font-poppins text-white text-base font-semibold active"
+        >
+          Inicio
+        </a>
+        <span class="line-separator"></span>
+        <a
+          href="/#album"
+          class="font-poppins text-white text-base font-semibold"
+        >
+          Álbum
+        </a>
+        <span class="line-separator"></span>
+        <a
+          href="/booking"
+          class="font-poppins text-white text-base font-semibold"
+        >
+          Reservar
+        </a>
       </nav>
     </header>
-
-    <main class="main-container">
-      <section class="section-presentation">
-        <video
-          autoplay
-          muted
-          loop
-          preload="true"
-          alt="Video de presentación albúm"
-        >
-          <source src="/assets/videos/presentation.mp4" type="video/mp4" />
-          No compatible video player detected.
-        </video>
-
-        <article class="article-presentation">
-          <div class="article-presentation-info">
-            <h1>From Zero Deluxe edition</h1>
-
-            <p>
-              <strong>LINKIN PARK</strong> • Fecha de lanzamiento: 16 de mayo de
-              2025
+    <div class="video-container w-100">
+      <video
+        class="h-100 w-100"
+        autoplay
+        muted
+        loop
+        preload="true"
+        alt="Video de presentación albúm"
+      >
+        <source src="/assets/videos/presentation.mp4" type="video/mp4" />
+        No compatible video player detected.
+      </video>
+      <div class="detail-presentation text-white text-xl">
+        <h1 class="font-saatliches font-black text-nowrap text-3xl">
+          LINKIN PARK
+        </h1>
+        <span>•</span>
+        <div class="date-container">
+          <div class="date-item">
+            <p id="date-days" class="font-poppins font-bold text-xl">00</p>
+            <p class="font-poppins text-sm font-semibold text-gray-light">
+              Días
             </p>
-
-            <div class="article-presentation-date-container">
-              <div class="article-presentation-date-item">
-                <h2 id="date-days"></h2>
-                <span>días</span>
-              </div>
-              <span class="line-separator"></span>
-              <div class="article-presentation-date-item">
-                <h2 id="date-hours"></h2>
-                <span>horas</span>
-              </div>
-              <span class="line-separator"></span>
-              <div class="article-presentation-date-item">
-                <h2 id="date-minutes"></h2>
-                <span>minutos</span>
-              </div>
-              <span class="line-separator"></span>
-              <div class="article-presentation-date-item">
-                <h2 id="date-seconds"></h2>
-                <span>segundos</span>
-              </div>
-            </div>
           </div>
-          <a href="/#album" class="btn-primary">Escuchar el álbum</a>
-        </article>
-      </section>
+          <span class="line-separator"></span>
+          <div class="date-item">
+            <p id="date-hours" class="font-poppins font-bold text-xl">00</p>
+            <p class="font-poppins text-sm font-semibold text-gray-light">
+              Horas
+            </p>
+          </div>
+          <span class="line-separator"></span>
+          <div class="date-item">
+            <p id="date-minutes" class="font-poppins font-bold text-xl">00</p>
+            <p class="font-poppins text-sm font-semibold text-gray-light">
+              Minutos
+            </p>
+          </div>
+          <span class="line-separator"></span>
+          <div class="date-item">
+            <p id="date-seconds" class="font-poppins font-bold text-xl">00</p>
+            <p class="font-poppins text-sm font-semibold text-gray-light">
+              Segundos
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main-container">
+      <section class="section-detail w-100">
+        <iframe
+          class="video-detail"
+          src="https://www.youtube.com/embed/SRXH9AbT280?si=6nKmVKe5-b38VGDM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
 
-      <section class="section-band-info-container">
-        <article>
-          <iframe
-            width="600"
-            height="338"
-            src="https://www.youtube.com/embed/SRXH9AbT280?si=6nKmVKe5-b38VGDM"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </article>
-        <article class="section-band-info">
-          <h2>Un nuevo comienzo</h2>
+        <article class="article-detail">
+          <h2 class="text-white font-poppins font-black text-2xl">
+            Un nuevo comienzo
+          </h2>
           <blockquote
             cite="https://es.wikipedia.org/wiki/Linkin_Park"
             title="Wikipedia"
           >
-            <p>
+            <p class="text-white font-poppins font-regular text-sm">
               En el año 2023 la banda incluyó a los miembos
-              <strong>Emily Armstrong</strong> y
-              <strong>Colin Brittain</strong>, con la intención de volver a
-              componer y grabar nueva música. Lanzando una canción inédita, y el
-              álbum <strong>Papercuts</strong>.
+              <strong class="text-primary font-extrabold"
+                >Emily Armstrong</strong
+              >
+              y
+              <strong class="text-primary font-extrabold">Colin Brittain</strong
+              >, con la intención de volver a componer y grabar nueva música.
+              Lanzando una canción inédita, y el álbum
+              <strong class="text-primary font-extrabold">Papercuts</strong>.
               <br />
               El 5 de septiembre de 2024, a través de una presentación en vivo,
               la banda anunció a Emily Armstrong como nueva vocalista y a Colin
               Brittain como nuevo baterista, luego de que Bourdon decidiera
               separarse del grupo. <br />
               El 15 de noviembre de 2024 lanzaron el álbum
-              <strong>From Zero</strong> y su gira
-              <strong>From Zero World Tour</strong>. <br />
-              El 24 de septiembre se estrenó el segundo sencillo
-              <strong>Heavy Is the Crown</strong>, que también es el tema
-              oficial del Campeonato Mundial de League of Legends de 2024.
+              <strong class="text-primary font-extrabold">From Zero</strong> y
+              su gira
+              <strong class="text-primary font-extrabold"
+                >From Zero World Tour</strong
+              >.
               <br />
+              El 24 de septiembre se estrenó el segundo sencillo
+              <strong class="text-primary font-extrabold">
+                Heavy Is the Crown</strong
+              >, que también es el tema oficial del Campeonato Mundial de League
+              of Legends de 2024.
               <br />
               El 27 de marzo de 2025, Linkin Park lanza una canción inedita
-              llamada <strong>Up From The Bottom</strong>, grabada durante las
-              sesiones de <strong>From Zero</strong>. Un día después anuncian el
-              lanzamiento de <strong>From Zero (Deluxe Edition)</strong>, con 3
-              canciones ineditas y 5 en vivo, para el 16 de mayo.
+              llamada
+              <strong class="text-primary font-extrabold">
+                Up From The Bottom</strong
+              >, grabada durante las sesiones de
+              <strong class="text-primary font-extrabold">From Zero</strong>. Un
+              día después anuncian el lanzamiento de
+              <strong class="text-primary font-extrabold">
+                From Zero (Deluxe Edition)</strong
+              >, con 3 canciones ineditas y 5 en vivo, para el 16 de mayo.
             </p>
           </blockquote>
         </article>
       </section>
-      <section class="section-gallery-container">
-        <h2>Miembros de la banda</h2>
-        <div class="section-gallery">
-          <div class="section-item-img brad-delson">
-            <div class="section-gallery-member gallery-member-brad-delson">
-              <h3>Brad Delson</h3>
-              <p>Guitarrista</p>
-              <p>47 años</p>
-            </div>
-          </div>
-          <div class="section-item-img colin-brittain">
-            <div class="section-gallery-member gallery-colin-brittain">
-              <h3>Colin Brittain</h3>
-              <p>Baterista</p>
-              <p>38 años</p>
-            </div>
-          </div>
-          <div class="section-item-img dave-farrell">
-            <div class="section-gallery-member gallery-dave-farrell">
-              <h3>Dave Farrell</h3>
-              <p>Bajista</p>
-              <p>48 años</p>
-            </div>
-          </div>
-          <div class="section-item-img emily-armstrong">
-            <div class="section-gallery-member gallery-emily-armstrong">
-              <h3>Emily Armstrong</h3>
-              <p>Vocalista</p>
-              <p>38 años</p>
-            </div>
-          </div>
-          <div class="section-item-img joe-hahn">
-            <div class="section-gallery-member gallery-joe-hahn">
-              <h3>Joe Hahn</h3>
-              <p>Scratching, tocadiscos, sampleo y programación</p>
-              <p>48 años</p>
-            </div>
-          </div>
-          <div class="section-item-img mike-shinoda">
-            <div class="section-gallery-member gallery-mike-shinoda">
-              <h3>Mike Shinoda</h3>
-              <p>
-                Rapero, guitarrista rítmico, teclista, compositor y productor
-              </p>
-              <p>48 años</p>
-            </div>
-          </div>
+
+      <section class="section-members w-100">
+        <h2 class="text-left text-white font-poppins font-black text-2xl w-100">
+          Miembros de la banda
+        </h2>
+        <div class="list-members-container w-100">
+          <ul class="list-members w-100">
+            <li class="list-item">
+              <img
+                class="w-100 h-100"
+                alt="Brand Delson"
+                src="/assets/images/brad-delson.jpg"
+              />
+              <div class="list-item-content h-100 w-100">
+                <p
+                  class="font-poppins font-bold text-white text-2xl text-center w-100"
+                >
+                  Brad Delson
+                </p>
+                <p
+                  class="font-poppins font-normal text-white text-lg text-center w-100"
+                >
+                  Guitarrista
+                </p>
+                <p
+                  class="font-poppins font-normal text-white text-lg text-center w-100"
+                >
+                  47 años
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <img
+                class="w-100 h-100"
+                alt="Brand Delson"
+                src="/assets/images/colin-brittain.jpg"
+              />
+              <div class="list-item-content h-100 w-100">
+                <p
+                  class="font-poppins font-bold text-white text-2xl text-center w-100"
+                >
+                  Colin Brittain
+                </p>
+                <p
+                  class="font-poppins font-normal text-white text-lg text-center w-100"
+                >
+                  Baterista
+                </p>
+                <p
+                  class="font-poppins font-normal text-white text-lg text-center w-100"
+                >
+                  38 años
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <img
+                class="w-100 h-100"
+                alt="Brand Delson"
+                src="/assets/images/dave-farrell.jpg"
+              />
+              <div class="list-item-content h-100 w-100">
+                <p
+                  class="font-poppins font-bold text-white text-2xl text-center w-100"
+                >
+                  Dave Farrell
+                </p>
+                <p
+                  class="font-poppins font-normal text-white text-lg text-center w-100"
+                >
+                  Bajista
+                </p>
+                <p
+                  class="font-poppins font-normal text-white text-lg text-center w-100"
+                >
+                  48 años
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <img
+                class="w-100 h-100"
+                alt="Brand Delson"
+                src="/assets/images/emily-armstrong.webp"
+              />
+              <div class="list-item-content h-100 w-100">
+                <p
+                  class="font-poppins font-bold text-white text-2xl text-center w-100"
+                >
+                  Emily Armstrong
+                </p>
+                <p
+                  class="font-poppins font-normal text-white text-lg text-center w-100"
+                >
+                  Vocalista
+                </p>
+                <p
+                  class="font-poppins font-normal text-white text-lg text-center w-100"
+                >
+                  38 años
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <img
+                class="w-100 h-100"
+                alt="Brand Delson"
+                src="/assets/images/joe-hahn.webp"
+              />
+              <div class="list-item-content h-100 w-100">
+                <p
+                  class="font-poppins font-bold text-white text-2xl text-center w-100"
+                >
+                  Joe Hahn
+                </p>
+                <p
+                  class="font-poppins font-normal text-white text-lg text-center w-100"
+                >
+                  Scratching, tocadiscos, sampleo y programación
+                </p>
+                <p
+                  class="font-poppins font-normal text-white text-lg text-center w-100"
+                >
+                  48 años
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <img
+                class="w-100 h-100"
+                alt="Brand Delson"
+                src="/assets/images/mike-shinoda.jpg"
+              />
+              <div class="list-item-content h-100 w-100">
+                <p
+                  class="font-poppins font-bold text-white text-2xl text-center w-100"
+                >
+                  Mike Shinoda
+                </p>
+                <p
+                  class="font-poppins font-normal text-white text-lg text-center w-100"
+                >
+                  Rapero, guitarrista rítmico, teclista, compositor y productor
+                </p>
+                <p
+                  class="font-poppins font-normal text-white text-lg text-center w-100"
+                >
+                  48 años
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section id="album" class="section-album-container">
-        <h2 style="width: 100%">Álbum From Zero</h2>
-        <table class="album-table">
+      <section id="album" class="section-album-container w-100">
+        <h2 class="text-left text-white font-poppins font-black text-2xl w-100">
+          Álbum From Zero
+        </h2>
+
+        <article class="album-vinyl-container">
+          <div class="vinyl-decoration">
+            <div class="vinyl-disk-container">
+              <img
+                class="vinyl-disk"
+                src="/assets/images/vinyl.png"
+                alt="Vinilo"
+                width="250"
+                height="250"
+              />
+            </div>
+            <img
+              src="/assets/images/cover-vinyl.jpg"
+              alt="Vinilo protector"
+              width="250"
+              height="250"
+            />
+          </div>
+          <p
+            id="title-detail"
+            class="text-center text-white font-saatliches font-bold text-2xl w-100"
+            style="height: 30px"
+          ></p>
+          <div class="audio-container w-100">
+            <audio id="album-source" controls></audio>
+          </div>
+        </article>
+
+        <table class="table-album text-white font-poppins">
           <thead>
-            <tr class="album-row-header">
-              <th align="left">#</th>
-              <th align="left" width="350">Título</th>
+            <tr class="album-head">
+              <th align="left" class="text-gray-light font-regular" width="50">
+                #
+              </th>
+              <th align="left" width="350" class="text-gray-light font-regular">
+                Título
+              </th>
               <th align="center">
                 <img
                   src="/assets/svgs/time.svg"
@@ -192,40 +399,19 @@
               </th>
             </tr>
           </thead>
-          <tbody class="album-row-body"></tbody>
+          <tbody id="tbody-album" class="text-white font-poppins"></tbody>
         </table>
-
-        <article class="album-vinyl-container">
-          <div class="vinyl-container">
-            <div class="disk-vinyl-container">
-              <img
-                class="disk-vinyl"
-                src="assets/images/vinyl.png"
-                width="250"
-                height="250"
-                alt="Vinilo"
-              />
-            </div>
-            <img
-              class="cover-vinyl"
-              src="/assets/images/cover-vinyl.jpg"
-              width="250"
-              height="250"
-              alt="Vinilo"
-            />
-          </div>
-          <p id="title-detail" class="detail-title-album"></p>
-          <audio id="album-source" controls></audio>
-        </article>
       </section>
     </main>
 
     <footer class="footer-container">
-      <h4 class="footer-title">
+      <h4 class="footer-title font-saatliches text-3xl text-white font-black">
         <img src="/assets/images/logo.png" width="50" height="50" alt="" />
         LINKIN PARK
       </h4>
-      <p>Siguenos en nuestras redes</p>
+      <p class="text-white font-poppins text-sm font-semibold">
+        Siguenos en nuestras redes
+      </p>
       <nav class="social-networks-container">
         <div class="tooltip">
           <a
@@ -240,7 +426,11 @@
               height="30"
             />
           </a>
-          <p class="tooltip-message">Instagram</p>
+          <p
+            class="tooltip-message text-white font-poppins text-xs font-medium"
+          >
+            Instagram
+          </p>
         </div>
 
         <div class="tooltip">
@@ -257,7 +447,11 @@
               height="30"
             />
           </a>
-          <p class="tooltip-message">Youtube</p>
+          <p
+            class="tooltip-message text-white font-poppins text-xs font-medium"
+          >
+            Youtube
+          </p>
         </div>
 
         <div class="tooltip">
@@ -274,7 +468,11 @@
               height="30"
             />
           </a>
-          <p class="tooltip-message">Spotify</p>
+          <p
+            class="tooltip-message text-white font-poppins text-xs font-medium"
+          >
+            Spotify
+          </p>
         </div>
       </nav>
     </footer>
