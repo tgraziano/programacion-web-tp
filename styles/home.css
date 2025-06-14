@@ -8,8 +8,9 @@
 
 /* Band Info */
 .section-band-info-container {
+  align-items: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 25px;
   padding: 25px 190px;
 }
@@ -158,7 +159,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-left: 3px;
 }
 
 .album-row:hover .managment-record {
@@ -166,7 +166,8 @@
 }
 
 .album-row-index {
-  font-size: 14px;
+  font-size: 16px;
+  color: var(--neutral-300);
 }
 
 .album-row {
@@ -174,6 +175,11 @@
     font-size: 18px;
     font-weight: 600;
     padding: 8px 12px;
+  }
+  & > .album-row-duration {
+    color: var(--neutral-300);
+    font-weight: 400;
+    font-size: 16px;
   }
   &:hover > td {
     background-color: #80808044;
@@ -184,25 +190,39 @@
 }
 
 .album-vinyl-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  width: 380px;
+  width: 300px;
 }
 
 .vinyl-container {
   position: relative;
 }
 
-.disk-vinyl {
+.disk-vinyl-container {
   position: absolute;
   top: 0;
   left: 0;
+  width: fit-content;
+  height: fit-content;
+  transition: transform 300ms ease-in-out;
+}
+
+.disk-vinyl-container-active {
+  transform: translateX(50%);
 }
 
 .disk-vinyl-active {
   animation: rotateInfinite 3s linear infinite;
   animation-play-state: running;
+}
+
+.detail-title-album {
+  color: #fff;
+  height: 25px;
+  font-weight: 600;
 }
 
 .cover-vinyl {
@@ -211,9 +231,9 @@
 
 @keyframes rotateInfinite {
   from {
-    transform: translateX(50%) rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    transform: translateX(50%) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
