@@ -79,15 +79,17 @@
       </section>
       <section class="booking-form-container">
         <h2>Reserve su vinilo firmado</h2>
-        <form action="/booking/" method="get" class="form-container">
+        <form class="form-container">
           <input
             type="email"
             class="input-email"
+            name="email"
             placeholder="Correo"
+            autocomplete="off"
             required
           />
 
-          <select class="select-sign" required>
+          <select class="select-sign" name="sign" required>
             <option value="" selected disabled>Firmado por:</option>
             <option value="brad-delson">Brad Delson</option>
             <option value="colin-brittain">Colin Brittain</option>
@@ -97,7 +99,9 @@
             <option value="mike-shinoda">Mike Shinoda</option>
           </select>
           <div class="price-detail-container">
-            <button type="submit" class="btn-primary">Reservar</button>
+            <button type="submit" name="button-reserve" class="btn-primary">
+              Reservar
+            </button>
             <p>$ 250.000</p>
           </div>
         </form>
