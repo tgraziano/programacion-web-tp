@@ -176,148 +176,41 @@
       </section>
 
       <section id="album" class="section-album-container">
-        <article>
+        <table class="album-table">
+          <thead>
+            <tr class="album-row-header">
+              <th align="left">#</th>
+              <th align="left" width="350">Título</th>
+              <th align="center">
+                <img
+                  src="/assets/svgs/time.svg"
+                  alt="Duración"
+                  width="15"
+                  height="15"
+                />
+              </th>
+            </tr>
+          </thead>
+          <tbody class="album-row-body"></tbody>
+        </table>
+
+        <article class="album-vinyl-container">
           <div class="vinyl-container">
             <img
-              class="img-vinyl"
-              src="/assets/images/vinyl.webp"
-              alt="Vinyl"
+              class="disk-vinyl disk-vinyl-active"
+              src="assets/images/vinyl.png"
+              width="250"
+              height="250"
+              alt="Vinilo"
             />
             <img
               class="cover-vinyl"
-              src="assets/images/cover-vinyl.png"
-              alt="Cover Vinyl"
+              src="/assets/images/cover-vinyl.jpg"
+              width="250"
+              height="250"
+              alt="Vinilo"
             />
           </div>
-        </article>
-        <article class="section-album-detail-container">
-          <h2>Álbum: From zero</h2>
-          <audio id="album-audio" style="display: none">
-            Your browser does not support the <code>audio</code> element.
-          </audio>
-          <ul>
-            <li>
-              From Zero (Intro)
-              <button type="button" name="play-from-zero">
-                <img
-                  src="/assets/svgs/play.svg"
-                  alt="Play"
-                  width="20"
-                  height="23"
-                />
-              </button>
-            </li>
-            <li>
-              The Emptiness Machine
-              <button type="button" name="play-the-emptiness-machine">
-                <img
-                  src="/assets/svgs/play.svg"
-                  alt="Play"
-                  width="20"
-                  height="23"
-                />
-              </button>
-            </li>
-            <li>
-              Cut the Bridge
-              <button type="button" name="play-cut-the-bridge">
-                <img
-                  src="/assets/svgs/play.svg"
-                  alt="Play"
-                  width="20"
-                  height="23"
-                />
-              </button>
-            </li>
-            <li>
-              Heavy Is the Crown
-              <button type="button" name="play-heavy-is-the-crown">
-                <img
-                  src="/assets/svgs/play.svg"
-                  alt="Play"
-                  width="20"
-                  height="23"
-                />
-              </button>
-            </li>
-            <li>
-              Over Each Other
-              <button type="button" name="play-over-each-other">
-                <img
-                  src="/assets/svgs/play.svg"
-                  alt="Play"
-                  width="20"
-                  height="23"
-                />
-              </button>
-            </li>
-            <li>
-              Casualty
-              <button type="button" name="play-casualty">
-                <img
-                  src="/assets/svgs/play.svg"
-                  alt="Play"
-                  width="20"
-                  height="23"
-                />
-              </button>
-            </li>
-            <li>
-              Overflow
-              <button type="button" name="play-overflow">
-                <img
-                  src="/assets/svgs/play.svg"
-                  alt="Play"
-                  width="20"
-                  height="23"
-                />
-              </button>
-            </li>
-            <li>
-              Two Faced
-              <button type="button" name="play-two-faced">
-                <img
-                  src="/assets/svgs/play.svg"
-                  alt="Play"
-                  width="20"
-                  height="23"
-                />
-              </button>
-            </li>
-            <li>
-              Stained
-              <button type="button" name="play-stained">
-                <img
-                  src="/assets/svgs/play.svg"
-                  alt="Play"
-                  width="20"
-                  height="23"
-                />
-              </button>
-            </li>
-            <li>
-              IGYEIH
-              <button type="button" name="play-igyeih">
-                <img
-                  src="/assets/svgs/play.svg"
-                  alt="Play"
-                  width="20"
-                  height="23"
-                />
-              </button>
-            </li>
-            <li>
-              Good Things Go
-              <button type="button" name="play-good-things-go">
-                <img
-                  src="/assets/svgs/play.svg"
-                  alt="Play"
-                  width="20"
-                  height="23"
-                />
-              </button>
-            </li>
-          </ul>
         </article>
       </section>
     </main>
@@ -328,7 +221,7 @@
         LINKIN PARK
       </h4>
       <p>Siguenos en nuestras redes</p>
-      <div class="social-networks-container">
+      <nav class="social-networks-container">
         <div class="tooltip">
           <a
             href="https://www.instagram.com/linkinpark"
@@ -378,7 +271,7 @@
           </a>
           <p class="tooltip-message">Spotify</p>
         </div>
-      </div>
+      </nav>
     </footer>
 
     <script type="module" src="/js/home.js" async></script>
