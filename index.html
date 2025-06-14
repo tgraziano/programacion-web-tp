@@ -176,6 +176,7 @@
       </section>
 
       <section id="album" class="section-album-container">
+        <h2 style="width: 100%">Álbum From Zero</h2>
         <table class="album-table">
           <thead>
             <tr class="album-row-header">
@@ -196,13 +197,15 @@
 
         <article class="album-vinyl-container">
           <div class="vinyl-container">
-            <img
-              class="disk-vinyl"
-              src="assets/images/vinyl.png"
-              width="250"
-              height="250"
-              alt="Vinilo"
-            />
+            <div class="disk-vinyl-container">
+              <img
+                class="disk-vinyl"
+                src="assets/images/vinyl.png"
+                width="250"
+                height="250"
+                alt="Vinilo"
+              />
+            </div>
             <img
               class="cover-vinyl"
               src="/assets/images/cover-vinyl.jpg"
@@ -211,6 +214,8 @@
               alt="Vinilo"
             />
           </div>
+          <p id="title-detail" class="detail-title-album"></p>
+          <audio id="album-source" controls></audio>
         </article>
       </section>
     </main>
