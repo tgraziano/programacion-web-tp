@@ -1,7 +1,7 @@
-const TBODY = document.querySelector(".album-row-body");
+const TBODY = document.querySelector("#tbody-album");
 const AUDIO_CONTROL = document.querySelector("#album-source");
-const IMG_VINYL_CONTAINER = document.querySelector(".disk-vinyl-container");
-const IMG_VINYL = document.querySelector(".disk-vinyl");
+const IMG_VINYL_CONTAINER = document.querySelector(".vinyl-disk-container");
+const IMG_VINYL = document.querySelector(".vinyl-disk");
 const TITLE_DETAIL = document.querySelector("#title-detail");
 
 const rows = [
@@ -82,19 +82,19 @@ rows.map((row) => {
   const rowElement = document.createElement("tr");
   rowElement.classList.add("album-row");
   rowElement.innerHTML = `
-    <td align="left" class="row-action row-text-gray">
-      <span class="album-row-index">${row.index}</span>
-      <button type="button" class="managment-record" data-audio="${row.index}">
+    <td align="left" class="album-item-action">
+      <span class="text-gray-light text-base">${row.index}</span>
+      <button type="button" class="btn btn-audio" data-audio="${row.index}">
         <img
           src="/assets/svgs/play.svg"
-          width="17"
-          height="20"
+          width="15"
+          height="17"
           alt="Play"
         />
       </button>
     </td>
-    <td align="left">${row.title}</td>
-    <td align="left" class="album-row-duration">${row.duration}</td>
+    <td align="left" class="font-semibold text-white text-xl">${row.title}</td>
+    <td align="left" class="text-gray-light text-base">${row.duration}</td>
   `;
   TBODY.appendChild(rowElement);
 });
@@ -109,10 +109,10 @@ rows.map(({ index, source }) => {
       state.playing = false;
       AUDIO_CONTROL.pause();
       BUTTON_ELEMENT.innerHTML = `
-        <img
+       <img
           src="/assets/svgs/play.svg"
-          width="17"
-          height="20"
+          width="15"
+          height="17"
           alt="Play"
         />
       `;
@@ -125,8 +125,8 @@ rows.map(({ index, source }) => {
       BUTTON_ELEMENT.innerHTML = `
         <img
           src="/assets/svgs/pause.svg"
-          width="20"
-          height="20"
+          width="15"
+          height="15"
           alt="Pause"
         />
       `;
@@ -135,15 +135,15 @@ rows.map(({ index, source }) => {
 });
 
 const resetButtonsState = () => {
-  const BUTTONS_MANAGEMENT = document.querySelectorAll(".managment-record");
+  const BUTTONS_MANAGEMENT = document.querySelectorAll(".btn-audio");
   BUTTONS_MANAGEMENT.forEach((button) => {
     button.innerHTML = `
-      <img
-        src="/assets/svgs/play.svg"
-        width="17"
-        height="20"
-        alt="Play"
-      />
+       <img
+          src="/assets/svgs/play.svg"
+          width="15"
+          height="17"
+          alt="Play"
+        />
     `;
   });
 };
@@ -156,20 +156,28 @@ AUDIO_CONTROL.onplay = () => {
   BUTTON_ELEMENT.innerHTML = `
     <img
       src="/assets/svgs/pause.svg"
-      width="20"
-      height="20"
+      width="15"
+      height="15"
       alt="Pause"
     />
   `;
-  IMG_VINYL_CONTAINER.classList.add("disk-vinyl-container-active");
-  IMG_VINYL.classList.add("disk-vinyl-active");
+  IMG_VINYL_CONTAINER.classList.add("vinyl-disk-container-active");
+  IMG_VINYL.classList.add("vinyl-disk-active");
   const row = rows.find((row) => row.index === state.current);
   TITLE_DETAIL.innerHTML = row.title;
 };
 
 AUDIO_CONTROL.onpause = () => {
   resetButtonsState();
-  IMG_VINYL_CONTAINER.classList.remove("disk-vinyl-container-active");
-  IMG_VINYL.classList.remove("disk-vinyl-active");
-  TITLE_DETAIL.innerHTML = "";
+  IMG_VINYL_CONTAINER.classList.remove("vinyl-disk-container-active");
+  IMG_VINYL.classList.remove("vinyl-disk-active");
+};
+
+AUDIO_CONTROL.onended = () => {
+  const newIndex = state.current + 1;
+  if (newIndex > 11) return;
+  const BUTTON_ELEMENT = document.querySelector(
+    `button[data-audio="${newIndex}"]`
+  );
+  BUTTON_ELEMENT.click();
 };

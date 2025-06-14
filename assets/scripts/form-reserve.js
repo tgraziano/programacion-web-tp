@@ -1,5 +1,5 @@
 // Vars
-const FORM_RESERVE = document.querySelector(".form-container");
+const FORM_RESERVE = document.querySelector(".form-booking");
 const BUTTON_RESERVE = document.querySelector("button[name='button-reserve']");
 
 // Functions
