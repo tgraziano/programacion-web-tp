@@ -39,7 +39,6 @@
 .section-gallery-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 24px;
   padding-inline: 190px;
   justify-content: center;
@@ -48,9 +47,8 @@
 
 .section-gallery {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 20px;
+  width: 100%;
 }
 
 .section-gallery-member {
