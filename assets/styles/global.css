@@ -1,6 +1,7 @@
-@import url("/assets/styles/colors.css");
-@import url("/assets/styles/fonts.css");
-@import url("/assets/styles/buttons.css");
+@import url("/assets/styles/design/buttons.css");
+@import url("/assets/styles/design/colors.css");
+@import url("/assets/styles/design/fonts.css");
+@import url("/assets/styles/design/tooltip.css");
 
 * {
   box-sizing: border-box;
