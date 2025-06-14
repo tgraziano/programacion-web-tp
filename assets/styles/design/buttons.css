@@ -4,6 +4,7 @@ button {
   cursor: pointer;
   &:disabled {
     cursor: default;
+    opacity: 0.5;
   }
 }
 
@@ -19,7 +20,7 @@ button {
   width: fit-content;
   transition: transform 300ms ease-in-out;
   will-change: transform;
-  &:hover {
+  &:not(:disabled):hover {
     transform: scale(1.1);
   }
 }
