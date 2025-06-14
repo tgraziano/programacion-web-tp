@@ -1,0 +1,48 @@
+.text-xs {
+  font-size: 0.75rem; /* 12px */
+  @media (width < 560px) {
+    font-size: 0.5rem; /* 8px */
+  }
+}
+
+.text-sm {
+  font-size: 0.875rem; /* 14px */
+  @media (width < 560px) {
+    font-size: 0.625rem; /* 10px */
+  }
+}
+
+.text-base {
+  font-size: 1rem; /* 16px */
+  @media (width < 560px) {
+    font-size: 0.75rem; /* 12px */
+  }
+}
+
+.text-lg {
+  font-size: 1.125rem; /* 18px */
+  @media (width < 560px) {
+    font-size: 0.875rem; /* 14px */
+  }
+}
+
+.text-xl {
+  font-size: 1.25rem; /* 20px */
+  @media (width < 560px) {
+    font-size: 1rem; /* 16px */
+  }
+}
+
+.text-2xl {
+  font-size: 1.5rem; /* 24px */
+  @media (width < 560px) {
+    font-size: 1.125rem; /* 18px */
+  }
+}
+
+.text-3xl {
+  font-size: 1.875rem; /* 30px */
+  @media (width < 560px) {
+    font-size: 1.5rem; /* 24px */
+  }
+}

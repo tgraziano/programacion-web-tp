@@ -1,0 +1,13 @@
+.m-1 {
+  margin: 0.063rem;
+}
+
+.mx-1 {
+  margin-left: 0.063rem;
+  margin-right: 0.063rem;
+}
+
+.my-1 {
+  margin-top: 0.063rem;
+  margin-bottom: 0.063rem;
+}

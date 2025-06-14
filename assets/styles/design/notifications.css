@@ -16,8 +16,10 @@
 }
 
 .notifications-list > li {
-  border: 2px solid var(--neutral-50);
-  background-color: var(--neutral-900);
+  border: 2px solid var(--white);
+  background-color: var(--gray-dark);
+  color: var(--white);
+  font-family: var(--font-poppins);
   border-radius: 8px;
   align-items: center;
   display: flex;
