@@ -1,4 +1,9 @@
-const dateLimit = new Date("2025-05-16T00:00:00Z");
+// Agregar fecha limite falsa
+const second = 1000;
+const minute = second * 60;
+const hour = minute * 60;
+const day = hour * 24;
+const dateLimit = new Date(Date.now() + day);
 
 function getTimes() {
   const now = new Date();
