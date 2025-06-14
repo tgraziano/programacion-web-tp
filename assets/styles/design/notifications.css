@@ -1,0 +1,29 @@
+.notifications-list {
+  position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  list-style: none;
+  overflow-y: hidden;
+  padding: 0;
+  pointer-events: none;
+  z-index: 999;
+  padding-right: 15px;
+  width: 400px;
+}
+
+.notifications-list > li {
+  border: 2px solid var(--neutral-50);
+  background-color: var(--neutral-900);
+  border-radius: 8px;
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 16px;
+  width: 100%;
+}
