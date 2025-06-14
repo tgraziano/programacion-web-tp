@@ -1,0 +1,192 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-bottom: 25px;
+  width: 100%;
+}
+
+/* Band Info */
+.section-band-info-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 25px 190px;
+}
+
+.section-band-info-container > article {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section-band-info > h2 {
+  font-size: 24px;
+  font-weight: 800;
+  display: inline;
+}
+
+.section-band-info p > strong {
+  color: var(--primary-light);
+  display: inline;
+}
+
+.section-band-info > blockquote {
+  margin: 0;
+}
+
+/* Gallery Members */
+.section-gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-inline: 190px;
+  justify-content: center;
+  width: 100%;
+}
+
+.section-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.section-gallery-member {
+  background-color: var(--neutral-900);
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  opacity: 0;
+  height: 0;
+  padding: 16px 10px;
+  height: fit-content;
+  width: 100%;
+  transition: opacity 300ms ease-in-out;
+}
+
+.section-item-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 14px;
+  display: flex;
+  align-items: flex-end;
+  height: 500px;
+  width: 150px;
+  transition: width 300ms ease-in-out;
+  &:hover {
+    width: 300px;
+  }
+}
+
+.brad-delson {
+  background-image: url("/assets/images/brad-delson.jpg");
+  &:hover .gallery-member-brad-delson {
+    opacity: 1;
+  }
+}
+
+.colin-brittain {
+  background-image: url("/assets/images/colin-brittain.jpg");
+  &:hover .gallery-colin-brittain {
+    opacity: 1;
+  }
+}
+
+.dave-farrell {
+  background-image: url("/assets/images/dave-farrell.jpg");
+  &:hover .gallery-dave-farrell {
+    opacity: 1;
+  }
+}
+
+.emily-armstrong {
+  background-image: url("/assets/images/emily-armstrong.webp");
+  &:hover .gallery-emily-armstrong {
+    opacity: 1;
+  }
+}
+
+.joe-hahn {
+  background-image: url("/assets/images/joe-hahn.webp");
+  background-position: 75%;
+  &:hover .gallery-joe-hahn {
+    opacity: 1;
+  }
+}
+
+.mike-shinoda {
+  background-image: url("/assets/images/mike-shinoda.jpg");
+  &:hover .gallery-mike-shinoda {
+    opacity: 1;
+  }
+}
+
+/* Section Álbum */
+
+.section-album-container {
+  display: flex;
+  padding-inline: 190px;
+  width: 100%;
+}
+.section-album-container > article {
+  height: 100%;
+  width: 50%;
+}
+
+.vinyl-container {
+  display: flex;
+  position: relative;
+}
+
+.cover-vinyl {
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+
+.img-vinyl {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  height: 275px;
+}
+
+.img-vinyl-active {
+  animation: rotateInfinite 3s linear infinite;
+  animation-play-state: running;
+}
+
+@keyframes rotateInfinite {
+  from {
+    transform: translateX(138px) rotate(0deg);
+  }
+  to {
+    transform: translateX(138px) rotate(360deg);
+  }
+}
+
+.section-album-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.section-album-detail-container > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section-album-detail-container > ul > li {
+  background-color: var(--neutral-900);
+  border-radius: 6px;
+  padding: 12px 24px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & > button:hover {
+    opacity: 0.7;
+  }
+}

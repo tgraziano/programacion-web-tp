@@ -1,0 +1,25 @@
+/* Footer */
+.footer-container {
+  align-items: center;
+  background-color: var(--primary-ultra-dark);
+  padding: 14px 190px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.footer-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-saatliches);
+  font-size: 34px;
+}
+
+.social-networks-container {
+  align-items: center;
+  display: flex;
+  gap: 15px;
+}

@@ -1,0 +1,25 @@
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-radius: 25px;
+  color: var(--neutral-50);
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  font-size: 18px;
+  padding: 12px 24px;
+  height: fit-content;
+  width: fit-content;
+  transition: transform 300ms ease-in-out;
+  will-change: transform;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
