@@ -4,6 +4,7 @@
   color: var(--white);
   cursor: pointer;
   transition: scale 200ms ease-in-out;
+  font-weight: 600;
   will-change: transform;
   width: fit-content;
   &:disabled {
@@ -23,5 +24,16 @@
   display: flex;
   justify-content: center;
   padding: 12px 24px;
+  gap: 15px;
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  outline: 3px solid var(--primary);
+  color: var(--primary);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 22px;
   gap: 15px;
 }
