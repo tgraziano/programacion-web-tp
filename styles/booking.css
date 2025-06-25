@@ -14,3 +14,14 @@
   gap: 16px;
   max-width: 450px;
 }
+
+.info-user-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.info-user-container > .input-outline {
+  width: 48%;
+}
