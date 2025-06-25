@@ -8,6 +8,9 @@
   color: var(--white);
   font-size: 16px;
   font-weight: 400;
+  &:focus {
+    outline: 2px solid var(--white);
+  }
 }
 
 .input-outline::placeholder {
@@ -18,4 +21,8 @@
 .input-outline option {
   background: var(--gray-dark);
   color: var(--white);
+}
+
+textarea {
+  resize: none;
 }
