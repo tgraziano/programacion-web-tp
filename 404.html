@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
     <link rel="stylesheet" href="/styles/presentation.css" />
+    <link rel="stylesheet" href="/styles/not-found.css" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
@@ -131,17 +132,32 @@
     </div>
 
     <main>
-      <h1 class="font-poppins text-white text-3xl font-black">404</h1>
+      <div class="not-found-container">
+        <p class="text-decoration text-effect font-poppins font-black">404</p>
+        <p class="text-decoration font-poppins font-black">404</p>
+      </div>
+      <h1 class="font-poppins text-white text-3xl font-black">
+        Página no encontrada
+      </h1>
       <p class="text-white font-poppins text-xl font-semibold">
-        ¿Estás perdido? la página buscada no fué encontrada.
+        Puedes ir a las siguientes secciones:
       </p>
-      <a
-        href="/"
-        class="btn btn-primary font-poppins"
-        style="text-decoration: none"
-      >
-        Volver a la página principal
-      </a>
+      <nav class="btn-container">
+        <a
+          href="/#album"
+          class="btn btn-primary font-poppins"
+          style="text-decoration: none"
+        >
+          Álbum
+        </a>
+        <a
+          href="/booking"
+          class="btn btn-outline-primary font-poppins"
+          style="text-decoration: none"
+        >
+          Reservar
+        </a>
+      </nav>
     </main>
 
     <footer class="footer-container">
